@@ -1,0 +1,136 @@
+@media (max-width: 768px) {
+  /* Entire Layout */
+  .cd-section {
+    height: auto;
+  }
+  .cd-section > div {
+    height: auto;
+  }
+  .content {
+    position: static;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ######### home */
+  .home-inner {
+    height: 100vh;
+  }
+  .welcome-text {
+    font-size: 23px;
+  }
+  .home-heading {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+  }
+  .home-heading span {
+    font-size: 88px;
+    letter-spacing: -1px;
+  }
+
+  /* ######### about */
+
+  .about-inner {
+    height: 120vh;
+    border: none;
+  }
+  .about-section ul {
+    width: 95%;
+    letter-spacing: -1px;
+  }
+  .about-section ul li {
+    width: 100%;
+  }
+  .about-section ul li p {
+    font-size: 12px;
+  }
+  .skills-main {
+    margin-top: 30px;
+  }
+  .skills-main h1 {
+    margin-top: -30px;
+  }
+  .skills-section ul {
+    width: 100%;
+  }
+  .skills-section ul li {
+    width: 30%;
+  }
+  .skills-section ul#three {
+    margin-top: 25px;
+  }
+  .skills-section ul li p {
+    font-size: 12px;
+  }
+  .skills-section ul li span {
+    font-size: 0;
+  }
+  /* ######### project */
+  /* .project-inner {
+    height: auto;
+    border: none;
+  }
+  .tab > div {
+    width: 100%;
+  }
+  .view-project {
+    width: 100%;
+  }
+  .project-info {
+    padding: 20px;
+  }
+  .project-info p {
+    position: relative;
+
+  } */
+  .project-inner {
+    height: auto;
+    border: none;
+  }
+  .project-wrap {
+    flex-wrap: wrap;
+  }
+  .view-project {
+    width: 100%;
+  }
+
+  .project-info h3 {
+    margin-top: 175px;
+  }
+  .project-info::before {
+    top: -10px;
+    left: 10px;
+    margin-top: 30px;
+  }
+  .project-info {
+    position: static;
+    padding: 20px;
+    width: 100%;
+  }
+  .project-photo {
+    width: 100%;
+    overflow: hidden;
+    flex-wrap: wrap;
+    /* margin-top: -300px; */
+  }
+  .project-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: none;
+    box-sizing: border-box;
+  }
+  .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 60px;
+    top: 60% !important;
+    left: 0 !important;
+  }
+  .swiper-pagination-bullet {
+    padding: 5px;
+  }
+}

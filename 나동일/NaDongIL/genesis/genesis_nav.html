@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #999;
+      }
+      header {
+        position: relative;
+      }
+      .menu {
+        width: 1280px;
+        margin: 0 auto;
+        border: 1px solid #000;
+        color: #999;
+      }
+      .menu ul {
+        display: flex;
+        height: 50px;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .menu ul li {
+        flex: 1 1 10%;
+        text-align: center;
+        line-height: 50px;
+      }
+      .menu ul li a:hover,
+      .menu ul li a.on {
+        /*  background: #ccc; */
+      }
+      .menu ul li a {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .menu ul li a:hover::after,
+      .menu ul li a.active::after {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #000;
+        right: 30%;
+      }
+      .submenu {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 50px;
+        background: #111;
+        color: #999;
+      }
+      .submenu .lnb {
+        width: 1700px;
+        margin: 0 auto;
+        padding: 100px 0;
+        display: flex;
+        justify-content: space-between;
+      }
+      .submenu .lnb .txt {
+        width: 10%;
+      }
+      .submenu .lnb .txt p {
+        color: #fff;
+        margin-bottom: 20px;
+        font-size: 19px;
+      }
+      .submenu .lnb .txt li {
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      .submenu .lnb .txt li a:hover {
+        color: #fff;
+      }
+      .submenu .lnb .txt li:nth-of-type(1) a {
+        color: #fff;
+      }
+      .submenu .lnb .desc {
+        width: 85%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-shrink: 0;
+        justify-content: space-between;
+        position: relative;
+      }
+      .submenu .lnb .desc::before {
+        content: "";
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #333;
+      }
+      .submenu .lnb .desc img {
+        width: 250px;
+        margin-bottom: 20px;
+      }
+      .submenu .lnb .desc .inner {
+        width: 26%;
+        height: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .submenu .lnb .desc .box li {
+        display: flex;
+        margin: 5px;
+      }
+      .submenu .lnb .desc .inner:hover {
+        background: #252525;
+        transition: 1s;
+        border-color: #373636c3;
+        color: #fff;
+      }
+      .submenu .lnb .desc .inner a {
+        margin: 10px 0;
+        display: block;
+        border: 1px solid #fff;
+        color: #fff;
+        width: 250px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        transform: translateY(0);
+        transition: 1s;
+        position: relative;
+        font-size: 15px;
+      }
+      .submenu .lnb .desc .inner a::after {
+        content: "";
+        width: 0;
+        height: 100%;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transition: width 0ms ease-in-out 0.75s, opacity 0.75s 0ms;
+        z-index: -1;
+      }
+      .submenu .lnb .desc .inner a:hover:after {
+        width: 100%;
+        opacity: 1;
+        transition: width 0.25s ease-in-out, opacity 0ms;
+      }
+      .submenu .lnb .desc .inner a:hover {
+        color: #000;
+        transform-origin: left;
+      }
+      .submenu .lnb .desc .inner .box li:first-child {
+        font-size: 30px;
+      }
+      .submenu .lnb .desc .inner .box li:nth-child(2) {
+        font-size: 15px;
+        margin-bottom: 20px;
+      }
+      .submenu .lnb .desc .inner:nth-child(4) ul li:nth-child(1) {
+        font-size: 15px;
+      }
+      .submenu .lnb .desc .inner:nth-child(4) ul li:nth-child(2) {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="menu">
+        <ul>
+          <li><a href="#">모델</a></li>
+          <li><a href="#">구매</a></li>
+          <li><a href="#">체험</a></li>
+          <li><a href="#">멤버스</a></li>
+          <li><a href="#">제네시스</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="submenu">
+          <div class="lnb">
+            <div class="txt">
+              <ul>
+                <p>모델</p>
+                <li><a href="#">ALL</a></li>
+                <li><a href="#">SEDAN</a></li>
+                <li><a href="#">SUV</a></li>
+              </ul>
+            </div>
+            <div class="desc">
+              <div class="inner">
+                <ul class="box">
+                  <li>G90</li>
+                  <li>LONG WHEEL BASE</li>
+                  <li>
+                    <img src="images/genesis_sidebar_1.png" alt="genesis_1" />
+                  </li>
+                  <a href="#">자세히 보기</a>
+                  <li>견적 내기 <i class="fa-solid fa-angle-right"></i></li>
+                  <li>시승 신청 <i class="fa-solid fa-angle-right"></i></li>
+                </ul>
+              </div>
+              <div class="inner">
+                <ul class="box">
+                  <li>G90</li>
+                  <li>&nbsp</li>
+                  <li>
+                    <img src="images/genesis_sidebar_2.png" alt="genesis_1" />
+                  </li>
+                  <a href="#">자세히 보기</a>
+                  <li>견적 내기 <i class="fa-solid fa-angle-right"></i></li>
+                  <li>시승 신청 <i class="fa-solid fa-angle-right"></i></li>
+                </ul>
+              </div>
+              <div class="inner">
+                <ul class="box">
+                  <li>G80</li>
+                  <li>&nbsp</li>
+                  <li>
+                    <img src="images/genesis_sidebar_3.png" alt="genesis_1" />
+                  </li>
+                  <a href="#">자세히 보기</a>
+                  <li>견적 내기 <i class="fa-solid fa-angle-right"></i></li>
+                  <li>시승 신청 <i class="fa-solid fa-angle-right"></i></li>
+                </ul>
+              </div>
+              <div class="inner">
+                <ul class="box">
+                  <li>ELECTRIFIED</li>
+                  <li>G80</li>
+                  <li>
+                    <img src="images/genesis_sidebar_4.png" alt="genesis_1" />
+                  </li>
+                  <a href="#">자세히 보기</a>
+                  <li>견적 내기 <i class="fa-solid fa-angle-right"></i></li>
+                  <li>시승 신청 <i class="fa-solid fa-angle-right"></i></li>
+                </ul>
+              </div>
+              <div class="inner">
+                <ul class="box">
+                  <li>G70</li>
+                  <li>&nbsp</li>
+                  <li>
+                    <img src="images/genesis_sidebar_5.png" alt="genesis_1" />
+                  </li>
+                  <a href="#">자세히 보기</a>
+                  <li>견적 내기 <i class="fa-solid fa-angle-right"></i></li>
+                  <li>시승 신청 <i class="fa-solid fa-angle-right"></i></li>
+                </ul>
+              </div>
+              <div class="inner">
+                <ul class="box">
+                  <li>G70</li>
+                  <li>SHOOTING BREAKE</li>
+                  <li>
+                    <img src="images/genesis_sidebar_6.png" alt="genesis_1" />
+                  </li>
+                  <a href="#">자세히 보기</a>
+                  <li>견적 내기 <i class="fa-solid fa-angle-right"></i></li>
+                  <li>시승 신청 <i class="fa-solid fa-angle-right"></i></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script>
+      $(function () {
+        $(".submenu").css({ display: "none" });
+        $(".menu ul li").click(function (e) {
+          e.preventDefault(); //<-링크에서 # 으로 안넘어가게 해줌
+          let i = $(this).index();
+          if ($(this).find("a").hasClass("on")) {
+            $(".submenu").stop().slideUp();
+            $(".menu ul li a").removeClass("on");
+          } else {
+            $(".submenu").eq(i).siblings().css({ display: "none" });
+            $(".submenu").eq(i).stop().slideDown();
+            $(".menu ul li a").removeClass("on");
+            $(".menu ul li").eq(i).find("a").addClass("on");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

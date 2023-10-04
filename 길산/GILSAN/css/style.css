@@ -1,0 +1,398 @@
+/* Google Web Font : Montserrat */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Manrope:300,400,500,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Source+Code+Pro:wght@200;300;400;600&display=swap");
+/* FontAwesome CDN 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Sans:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Sans:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Black+Ops+One&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Sans:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Black+Ops+One&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Sans:wght@300;400;500;600&family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Black+Ops+One&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@200;400;500;600;700&family=Noto+Sans:wght@300;400;500;600&family=Permanent+Marker&display=swap");
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* Default CSS */
+body {
+  color: #222;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  background: #fff;
+}
+
+/* Entire Layout */
+.cd-section {
+  height: 100vh;
+}
+.cd-section > div {
+  height: 100%;
+  position: relative;
+}
+.content {
+  position: absolute;
+  width: calc(100% - 40px);
+  height: calc(100% - 80px);
+  left: 20px;
+  bottom: 20px;
+  overflow: hidden;
+}
+header {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+.gnb-inner {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  height: 60px;
+  line-height: 60px;
+  font-size: 23px;
+  display: flex;
+  justify-content: space-between;
+}
+.logo img {
+  width: 160px;
+  padding-top: 15px;
+  object-fit: contain;
+}
+.logo a {
+  color: #3f3f3f;
+}
+/* #####################  section : home */
+.home-inner {
+  background-color: #fff;
+  height: 100%;
+}
+.home-inner::before {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  animation: overlay 1s 2s ease-in-out both;
+}
+.welcome-text {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.2em;
+  /* font-family: "Black Ops One", cursive; */
+  animation: slideup 2s linear;
+  animation-fill-mode: both;
+}
+.welcome-text span {
+  display: block;
+  font-size: 26px;
+}
+
+.welcome-text span .fa {
+  color: rgb(224, 224, 59);
+  padding-left: 5px;
+}
+.opacity-image {
+  background: url(../images/man-1839604_1920\ copy.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100%;
+  opacity: 0;
+  animation: opacity-img 1s 2.5s ease-in-out both;
+}
+
+.home-heading {
+  position: absolute;
+  top: 50%;
+  left: 250px;
+  transform: translateY(-50%);
+}
+.home-heading span {
+  display: block;
+  font-size: 115px;
+  color: #fff;
+  font-weight: 600;
+  width: 0;
+  overflow: hidden;
+  animation: reveal 1s 3s ease-in-out both;
+  font-family: "Anton", sans-serif;
+}
+.home-heading span:nth-child(1) {
+  animation-delay: 3s;
+}
+.home-heading span:nth-child(2) {
+  animation-delay: 3.2s;
+}
+.home-heading span:nth-child(3) {
+  animation-delay: 3.4s;
+}
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    margin-top: 50px;
+  }
+  20% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  80% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes overlay {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes opacity-img {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes reveal {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/* ##################### section : about */
+.about-inner {
+  /* background-color: #1b1b24; */
+  /* background-color: #212121; */
+  border: 1px solid #ddd;
+  height: 100%;
+}
+
+.about-heading {
+  position: absolute;
+  /* top: 1%; */
+  width: 100%;
+  /* border: 1px solid red; */
+}
+
+.about-profile {
+  text-align: center;
+}
+.about-main {
+  border-bottom: 1px solid #ccc;
+  display: inline-block;
+}
+.about-main h1 {
+  font-size: 45px;
+}
+.about-section {
+  margin-top: 40px;
+  width: 100%;
+}
+.about-section ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+.about-section ul li {
+  width: 20%;
+  /* border: 1px solid red; */
+  text-align: center;
+}
+.about-section .fa {
+  font-size: 40px;
+}
+.about-section ul li img {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  text-align: center;
+}
+.about-section ul li span {
+  font-weight: 700;
+  font-size: 20px;
+  /* border: 1px solid blue; */
+  display: inline-block;
+  margin-top: 15px;
+}
+.about-section ul li p {
+  font-size: 16px;
+  margin-top: 5px;
+  text-align: center;
+}
+.about-section #two {
+  margin-top: 50px;
+}
+
+.about-skills {
+  background-color: #3f3f3f;
+  height: 405px;
+  text-align: center;
+  margin-top: 10px;
+}
+.about-skills img {
+  width: 40px;
+  height: 40px;
+  object-fit: covers;
+}
+.about-skills h1 {
+  font-size: 45px;
+  color: #ddd;
+}
+.skills-main {
+  border-bottom: 1px solid #ccc;
+  display: inline-block;
+}
+.skills-section {
+  /* border: 1px solid red; */
+  margin-top: 45px;
+}
+.skills-section ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid blue; */
+}
+.skills-section ul li {
+  width: 13%;
+  /* border: 1px solid yellow; */
+  text-align: center;
+}
+.desc {
+  margin-top: 5px;
+}
+.skills-section ul li p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ddd;
+}
+.skills-section ul li span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ddd;
+}
+.skills-section #three {
+  margin-top: 40px;
+}
+
+/* #####################  section : project */
+.project-inner {
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  position: relative;
+}
+.project-wrap {
+  display: flex;
+
+  /* border: 1px solid red; */
+}
+.project-info {
+  position: relative;
+  padding: 50px;
+  width: 25%;
+  /* border: 1px solid blue; */
+}
+.project-info h3 {
+  font-size: 45px;
+  margin-bottom: 70px;
+  margin-top: 120px;
+  position: relative;
+}
+.project-info p {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+.project-info ul {
+  line-height: 2em;
+  margin: 50px 0;
+}
+
+.project-info ul li::before {
+  content: "\f105";
+  font-family: fontawesome;
+  margin-right: 10px;
+}
+.project-info::before {
+  content: attr(data-text);
+  font-size: 130px;
+  color: rgb(233, 232, 232);
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+.project-photo {
+  width: 75%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-photo img {
+  height: 70%;
+  object-fit: contain;
+  box-shadow: 0 20px 20px rgba(102, 99, 95, 0.3);
+}
+.view-project {
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  background-color: #3f3f3f;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+  width: 250px;
+  transition: 0.5s;
+}
+.view-project:hover {
+  background-color: #000;
+}
+.view-project .fa {
+  transition: 0.5s;
+}
+.view-project:hover .fa {
+  margin-left: 30px;
+}
+.swiper-pagination {
+  position: absolute;
+  bottom: 10% !important;
+  left: -40% !important;
+}
+.swiper-pagination-bullet {
+  padding: 5px;
+}
+.swiper-pagination-bullet-active {
+  background-color: #3f3f3f;
+}

@@ -1,0 +1,229 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+@font-face {
+  font-family: "AppleSDGothicNeoR";
+  src: url(../webfonts/AppleSDGothicNeoR.woff) format(woff);
+}
+body {
+  font-family: "AppleSDGothicNeoR", "맑은 고딕", sans-serif;
+}
+header .banner {
+  width: 100%;
+  background: #f7f7f7;
+}
+header .banner .inner {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+header .banner .left {
+  width: 20%;
+  height: 500px;
+}
+header .banner .left ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header .banner .left ul li {
+  width: 100%;
+}
+header .banner .left li:nth-child(1) img {
+  width: 50px;
+}
+header .banner .left li:nth-child(2) img {
+  width: 350px;
+}
+header .banner .left li:nth-child(3) img {
+  width: 300px;
+}
+header .banner .left li:nth-child(4) img {
+  width: 200px;
+  padding-top: 70px;
+}
+header .banner .right {
+  width: 75%;
+}
+header .banner .right img {
+  width: 800px;
+}
+section .books {
+  width: 100%;
+  height: 600px;
+  background: url(../images/bg-books.jpg) 100% / cover;
+  color: #fff;
+}
+section .books .inner {
+  width: 400px;
+  height: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+section .books .inner ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section .books .inner ul li:nth-child(1) {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+section .books .inner ul li:nth-child(2) {
+  color: #ccc;
+}
+section .prize {
+  width: 100%;
+  background: #f7f7f7;
+  padding: 100px 0;
+}
+section .prize .inner {
+  width: 700px;
+  margin: 0 auto;
+}
+section .prize .inner .top {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 15px;
+}
+section .prize .inner .top ul {
+  display: flex;
+  align-items: center;
+}
+section .prize .inner .top ul > ul {
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+}
+section .prize .inner .top ul img {
+  width: 20px;
+}
+section .prize .inner .top ul li:nth-child(2) {
+  font-weight: bold;
+  margin: 5px 0;
+}
+section .prize .inner .bottom {
+  text-align: center;
+  padding-top: 60px;
+}
+section .prize .inner .bottom li:nth-child(1) {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+section .prize .inner .bottom li:nth-child(2) {
+  color: #666;
+}
+section .welfare {
+  background: url(../images/bg-man.jpg) 100% / cover;
+  width: 100%;
+}
+section .welfare .inner {
+  width: 800px;
+  margin: 0 auto;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 150px 0;
+}
+section .welfare .inner ul li {
+  width: 300px;
+}
+section .welfare .inner ul li:nth-child(1) {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+section .welfare .inner ul li:nth-child(2) {
+  color: #ccc;
+}
+section .welfare .inner img {
+  width: 400px;
+}
+footer .partner {
+  width: 100%;
+  height: 970px;
+  background: #ffeb60;
+}
+footer .partner .inner {
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 30px;
+  text-align: center;
+}
+footer .partner p:nth-child(1) img {
+  width: 600px;
+}
+footer .partner p:nth-child(2) {
+  margin: 50px 0 20px 0;
+}
+footer .partner p:nth-child(3) {
+  color: #666;
+}
+footer .partner ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 40px 0;
+  position: relative;
+  z-index: 2;
+}
+footer .partner ul img {
+  width: 50px;
+}
+footer .partner ul > li > ul {
+  width: 280px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 20px;
+  text-align: start;
+  padding: 20px;
+  font-size: 15px;
+}
+footer .partner ul > li > ul span {
+  font-weight: bold;
+  margin-left: 15px;
+}
+footer .partner ul > li > ul > li {
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+footer .partner ul > li > ul > li:nth-child(1) {
+  border-bottom: 1px solid #aaa;
+}
+footer .partner ul > li > ul > li:nth-child(2) {
+  color: #aaa;
+  line-height: 30px;
+}
+footer .illur {
+  width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  top: -190px;
+  background: #ffeb60;
+}
+footer .illur img {
+  width: 1400px;
+  z-index: 1;
+}

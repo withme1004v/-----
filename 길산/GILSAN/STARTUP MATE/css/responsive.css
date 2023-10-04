@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+  /* Default CSS */
+  body {
+    font-size: 16px;
+  }
+  section {
+    padding: 50px 15px;
+  }
+
+  /* ####### Section : welcom */
+
+  .welcome {
+    background-color: #f9f9f9;
+  }
+
+  .slideshow {
+    display: none;
+  }
+
+  .welcome-heading {
+    width: 100%;
+    left: 200px;
+    transform: translateY(-50%, -50%);
+  }
+}
